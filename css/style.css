@@ -1,0 +1,60 @@
+/* --- ESTILOS BASE (Móvil - Por defecto) --- */
+main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+html, body {
+    background-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    color: #404040;
+}
+    
+h1 {
+    font-size: 300%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Las imágenes en móvil suelen ocupar el ancho completo */
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* --- CONSULTA #1: VISTA DE TABLETA (772px) --- */
+/* Se activa cuando la pantalla mide 772px o más */
+@media screen and (min-width: 772px) {
+    .column {
+        width: 45%;           /* Los divs ocupan el 45% */
+        display: inline-block; /* Permite que se pongan uno al lado del otro */
+        vertical-align: top;   /* Alinea los bloques por la parte superior */
+        margin: 1%;            /* Espacio entre columnas */
+    }
+
+    img {
+        /* Las imágenes no deben superar el 30% de la altura de la ventana */
+        max-height: 30vh;
+        width: auto;           /* Mantiene la proporción original */
+    }
+}
+
+/* --- CONSULTA #2: VISTA DE PANTALLA GRANDE (998px) --- */
+/* Se activa cuando la pantalla mide 998px o más */
+@media screen and (min-width: 998px) {
+    .column {
+        width: 30%;           /* Los divs ahora ocupan el 30% (caben 3) */
+        /* display: inline-block se hereda de la media query anterior */
+    }
+}
